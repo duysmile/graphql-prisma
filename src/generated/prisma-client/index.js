@@ -11,11 +11,15 @@ var models = [
   {
     name: "User",
     embedded: false
+  },
+  {
+    name: "Vote",
+    embedded: false
   }
 ];
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://eu1.prisma.sh/duy-nguyen-f5e0ed/graphql-server/dev`
+  endpoint: `https://eu1.prisma.sh/duy-nguyen-f5e0ed/dev-server/dev`
 });
 exports.prisma = new exports.Prisma();
